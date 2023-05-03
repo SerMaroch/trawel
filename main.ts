@@ -40,11 +40,16 @@ basic.forever(function () {
         }
     } else {
         if (левый == черный && правый == черный) {
-            StartbitV2.startbit_setMotorSpeed(92, 100)
-            basic.pause(200)
-            StartbitV2.startbit_setMotorSpeed(0, 0)
-            перекрестки += 1
-            basic.showNumber(перекрестки)
+            if (перекрестки == 2) {
+                StartbitV2.startbit_setMotorSpeed(100, -100)
+                basic.pause(700)
+            } else {
+                StartbitV2.startbit_setMotorSpeed(92, 100)
+                basic.pause(200)
+                StartbitV2.startbit_setMotorSpeed(0, 0)
+                перекрестки += 1
+                basic.showNumber(перекрестки)
+            }
         } else if (левый == черный && правый == белый) {
             StartbitV2.startbit_setMotorSpeed(-100, 100)
         } else if (левый == белый && правый == черный) {
