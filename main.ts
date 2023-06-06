@@ -97,9 +97,14 @@ basic.forever(function () {
                     StartbitV2.startbit_setMotorSpeed(100, -100)
                     basic.pause(500)
                 } else if (перекрестки == 3) {
-                	
+                    Инверсия = 1
                 } else if (перекрестки == 4) {
                 	
+                } else if (перекрестки == 5) {
+                    Инверсия = 0
+                } else if (перекрестки == 6) {
+                    StartbitV2.startbit_setMotorSpeed(100, -100)
+                    basic.pause(500)
                 } else {
                     StartbitV2.startbit_setMotorSpeed(0, 0)
                     radio.sendString("go")
